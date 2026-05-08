@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #000000;
+  --bg: #6D001A;
   --text: #ffffff;
-  --gold: #6D001A;
-  --muted: #8a0021;
-  --navy: #0d0005;
+  --gold: #000000;
+  --muted: #d4a0b0;
+  --navy: #4a0012;
 }
 
 * {
@@ -30,7 +30,7 @@ body {
 /* Hide scrollbar visually but keep scroll */
 html {
   scrollbar-width: thin;
-  scrollbar-color: #6D001A44 transparent;
+  scrollbar-color: #00000044 transparent;
 }
 
 ::-webkit-scrollbar {
@@ -40,7 +40,7 @@ html {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6D001A66;
+  background: #00000066;
   border-radius: 2px;
 }
 
