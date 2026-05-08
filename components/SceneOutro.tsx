@@ -17,10 +17,10 @@ export default function SceneOutro({ scrollYProgress }: Props) {
     [0, 1]
   );
 
-  // Background color transition: #0a0806 → #0d1b2a
-  const bgR = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [10, 13]);
-  const bgG = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [8, 27]);
-  const bgB = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [6, 42]);
+  // Background color transition: #000000 → #1a0008 (deep burgundy)
+  const bgR = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [0, 26]);
+  const bgG = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [0, 0]);
+  const bgB = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [0, 8]);
 
   // Clamp all sub-ranges within [RANGE_START, 1.0]
   const text1Opacity = useTransform(
@@ -77,7 +77,7 @@ export default function SceneOutro({ scrollYProgress }: Props) {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 50% 40% at 50% 50%, rgba(201,168,76,0.05) 0%, transparent 70%)",
+            "radial-gradient(ellipse 50% 40% at 50% 50%, rgba(109,0,26,0.15) 0%, transparent 70%)",
         }}
       />
 
@@ -88,7 +88,7 @@ export default function SceneOutro({ scrollYProgress }: Props) {
       >
         {/* Eyebrow */}
         <motion.p
-          className="font-space-mono text-[#c9a84c] text-xs tracking-widest uppercase mb-8"
+          className="font-space-mono text-[#6D001A] text-xs tracking-widest uppercase mb-8"
           style={{ opacity: text1Opacity }}
         >
           Getty Provenance Index
@@ -96,7 +96,7 @@ export default function SceneOutro({ scrollYProgress }: Props) {
 
         {/* Main quote */}
         <motion.p
-          className="font-cormorant font-light text-[#f5f0e8] leading-tight mb-8"
+          className="font-cormorant font-light text-[#ffffff] leading-tight mb-8"
           style={{
             fontSize: "clamp(1.5rem, 3.5vw, 2.8rem)",
             opacity: text1Opacity,
@@ -107,13 +107,13 @@ export default function SceneOutro({ scrollYProgress }: Props) {
 
         {/* Gold divider */}
         <motion.div
-          className="w-16 h-px bg-[#c9a84c] mx-auto mb-8"
+          className="w-16 h-px bg-[#6D001A] mx-auto mb-8"
           style={{ opacity: text1Opacity }}
         />
 
         {/* Bold stat */}
         <motion.p
-          className="font-cormorant font-semibold text-[#f5f0e8] mb-16"
+          className="font-cormorant font-semibold text-[#ffffff] mb-16"
           style={{
             fontSize: "clamp(1.2rem, 2.5vw, 2rem)",
             opacity: text2Opacity,
@@ -121,7 +121,7 @@ export default function SceneOutro({ scrollYProgress }: Props) {
         >
           1% of artworks are in museums.
           <br />
-          <span className="text-[#8b7355] italic font-light">
+          <span className="text-[#999999] italic font-light">
             The rest remain unknown.
           </span>
         </motion.p>
@@ -135,16 +135,16 @@ export default function SceneOutro({ scrollYProgress }: Props) {
             className="inline-block group"
           >
             <div
-              className="relative border border-[#c9a84c] px-10 py-4 overflow-hidden transition-all duration-500"
+              className="relative border border-[#6D001A] px-10 py-4 overflow-hidden transition-all duration-500"
               style={{
-                background: "rgba(201,168,76,0.04)",
+                background: "rgba(109,0,26,0.04)",
               }}
             >
               {/* Hover fill */}
               <div
-                className="absolute inset-0 bg-[#c9a84c] opacity-0 group-hover:opacity-10 transition-opacity duration-500"
+                className="absolute inset-0 bg-[#6D001A] opacity-0 group-hover:opacity-10 transition-opacity duration-500"
               />
-              <span className="relative font-space-mono text-[#c9a84c] text-sm tracking-widest uppercase">
+              <span className="relative font-space-mono text-[#6D001A] text-sm tracking-widest uppercase">
                 Explore the Archive
               </span>
             </div>
@@ -153,7 +153,7 @@ export default function SceneOutro({ scrollYProgress }: Props) {
 
         {/* Footer */}
         <motion.p
-          className="font-space-mono text-[#8b7355] text-xs tracking-widest mt-16 opacity-40"
+          className="font-space-mono text-[#999999] text-xs tracking-widest mt-16 opacity-40"
           style={{ opacity: footerOpacity }}
         >
           Inspired by Getty Research Institute · Tracing Art
