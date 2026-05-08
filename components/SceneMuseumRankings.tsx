@@ -49,7 +49,7 @@ function MuseumRow({
     >
       {/* Rank */}
       <span
-        className="font-space-mono text-[#c9a84c] font-bold shrink-0 text-right"
+        className="font-space-mono text-[#6D001A] font-bold shrink-0 text-right"
         style={{
           fontSize: "clamp(1.2rem, 2.5vw, 2rem)",
           width: "clamp(2rem, 4vw, 3rem)",
@@ -61,23 +61,23 @@ function MuseumRow({
       {/* Name + city */}
       <div className="shrink-0" style={{ width: "clamp(180px, 32vw, 320px)" }}>
         <p
-          className="font-cormorant text-[#f5f0e8] leading-none"
+          className="font-cormorant text-[#ffffff] leading-none"
           style={{ fontSize: "clamp(0.9rem, 1.6vw, 1.15rem)" }}
         >
           {museum.name}
         </p>
-        <p className="font-space-mono text-[#8b7355] text-xs tracking-widest mt-0.5">
+        <p className="font-space-mono text-[#999999] text-xs tracking-widest mt-0.5">
           {museum.city}
         </p>
       </div>
 
       {/* Animated bar */}
-      <div className="flex-1 relative" style={{ height: "2px", background: "#1a1510" }}>
+      <div className="flex-1 relative" style={{ height: "2px", background: "#111111" }}>
         <motion.div
-          className="absolute left-0 top-0 h-full bg-[#c9a84c]"
+          className="absolute left-0 top-0 h-full bg-[#6D001A]"
           style={{
             width: useTransform(barWidth, (v) => `${v}%`),
-            boxShadow: "0 0 8px rgba(201,168,76,0.5)",
+            boxShadow: "0 0 8px rgba(109,0,26,0.5)",
           }}
         />
       </div>
@@ -105,7 +105,7 @@ export default function SceneMuseumRankings({ scrollYProgress }: Props) {
       aria-label="Museum Rankings"
     >
       <motion.div
-        className="absolute inset-0 bg-[#0a0806]"
+        className="absolute inset-0 bg-[#000000]"
         style={{ opacity: sceneOpacity }}
       />
 
@@ -114,7 +114,7 @@ export default function SceneMuseumRankings({ scrollYProgress }: Props) {
         style={{ opacity: sceneOpacity }}
       >
         <motion.p
-          className="font-space-mono text-[#c9a84c] text-xs tracking-widest uppercase mb-8"
+          className="font-space-mono text-[#6D001A] text-xs tracking-widest uppercase mb-8"
           style={{ opacity: headerOpacity }}
         >
           Global Provenance Index — Top Institutions
