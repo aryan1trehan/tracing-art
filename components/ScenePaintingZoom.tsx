@@ -32,12 +32,12 @@ function TextLine({
   return (
     <motion.div style={{ opacity, x }}>
       {index === 0 ? (
-        <p className="font-space-mono text-[#c9a84c] text-sm tracking-widest uppercase">
+        <p className="font-space-mono text-[#6D001A] text-sm tracking-widest uppercase">
           {line.label}
         </p>
       ) : (
         <p
-          className="font-cormorant italic text-[#f5f0e8] leading-snug"
+          className="font-cormorant italic text-[#ffffff] leading-snug"
           style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)" }}
         >
           {line.label.split("\n").map((l, j) => (
@@ -84,7 +84,7 @@ export default function ScenePaintingZoom({ scrollYProgress }: Props) {
       aria-label="Painting Zoom"
     >
       <motion.div
-        className="absolute inset-0 bg-[#0a0806]"
+        className="absolute inset-0 bg-[#000000]"
         style={{ opacity: sceneOpacity }}
       />
 
@@ -119,14 +119,14 @@ export default function ScenePaintingZoom({ scrollYProgress }: Props) {
           <div
             className="absolute inset-0"
             style={{
-              border: "12px solid #2a1f0e",
+              border: "12px solid #1a1a1a",
               boxShadow: "0 0 60px rgba(0,0,0,0.9), inset 0 0 30px rgba(0,0,0,0.6)",
             }}
           />
           {/* Inner gold trim */}
           <div
             className="absolute"
-            style={{ inset: "12px", border: "2px solid #c9a84c44" }}
+            style={{ inset: "12px", border: "2px solid #6D001A44" }}
           />
           {/* Canvas area */}
           <div
@@ -134,27 +134,27 @@ export default function ScenePaintingZoom({ scrollYProgress }: Props) {
             style={{
               inset: "20px",
               background:
-                "linear-gradient(135deg, #1a1208 0%, #0d0c08 40%, #1c1408 70%, #0a0806 100%)",
+                "linear-gradient(135deg, #1a0008 0%, #0d0005 40%, #1a0008 70%, #000000 100%)",
             }}
           >
             <div
               className="absolute inset-0 opacity-20"
               style={{
                 background: `
-                  radial-gradient(ellipse 60% 40% at 40% 45%, #c9a84c22 0%, transparent 60%),
-                  radial-gradient(ellipse 30% 50% at 70% 30%, #8b73551a 0%, transparent 50%)
+                  radial-gradient(ellipse 60% 40% at 40% 45%, #6D001A22 0%, transparent 60%),
+                  radial-gradient(ellipse 30% 50% at 70% 30%, #9999991a 0%, transparent 50%)
                 `,
               }}
             />
             <div className="absolute inset-4 opacity-10">
-              <div className="w-full h-full border border-[#c9a84c]" />
+              <div className="w-full h-full border border-[#6D001A]" />
             </div>
           </div>
         </div>
 
         {/* Caption */}
         <motion.p
-          className="font-space-mono text-[#8b7355] text-xs tracking-widest uppercase text-center mt-4"
+          className="font-space-mono text-[#999999] text-xs tracking-widest uppercase text-center mt-4"
           style={{ opacity: captionOpacity }}
         >
           Still Life · c. 1669
@@ -166,7 +166,7 @@ export default function ScenePaintingZoom({ scrollYProgress }: Props) {
         className="absolute right-0 top-0 bottom-0 w-1/3 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 100% 50%, rgba(201,168,76,0.04) 0%, transparent 70%)",
+            "radial-gradient(ellipse 80% 60% at 100% 50%, rgba(109,0,26,0.12) 0%, transparent 70%)",
         }}
       />
     </section>
