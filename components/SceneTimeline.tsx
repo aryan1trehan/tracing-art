@@ -40,14 +40,14 @@ function TimelineNode({
       style={{ opacity, y }}
     >
       <p
-        className="font-space-mono text-[#6D001A] font-bold mb-12"
+        className="font-space-mono text-[#ffffff] font-bold mb-12"
         style={{ fontSize: "clamp(0.75rem, 1.5vw, 1rem)" }}
       >
         {node.year}
       </p>
       <div style={{ height: 28 }} />
       <p
-        className="font-cormorant italic text-[#999999] text-center mt-10 leading-tight"
+        className="font-cormorant italic text-[#f0c8d4] text-center mt-10 leading-tight"
         style={{ fontSize: "clamp(0.75rem, 1.2vw, 0.9rem)", maxWidth: "100px" }}
       >
         {node.desc.split("\n").map((l, j) => (
@@ -81,7 +81,7 @@ function TimelineNodeCircle({
         cy={60}
         r={14}
         fill="none"
-        stroke="#6D001A"
+        stroke="#000000"
         strokeWidth="1"
         style={{ opacity }}
         filter="url(#strongGlow)"
@@ -90,8 +90,8 @@ function TimelineNodeCircle({
         cx={x}
         cy={60}
         r={6}
-        fill="#000000"
-        stroke="#6D001A"
+        fill="#6D001A"
+        stroke="#000000"
         strokeWidth="2"
         style={{ opacity }}
         filter="url(#glow)"
@@ -100,7 +100,7 @@ function TimelineNodeCircle({
         cx={x}
         cy={60}
         r={2}
-        fill="#6D001A"
+        fill="#000000"
         style={{ opacity }}
       />
     </g>
@@ -135,7 +135,7 @@ export default function SceneTimeline({ scrollYProgress }: Props) {
       aria-label="Timeline"
     >
       <motion.div
-        className="absolute inset-0 bg-[#000000]"
+        className="absolute inset-0 bg-[#6D001A]"
         style={{ opacity: sceneOpacity }}
       />
 
@@ -144,7 +144,7 @@ export default function SceneTimeline({ scrollYProgress }: Props) {
         style={{ opacity: sceneOpacity }}
       >
         <motion.p
-          className="font-space-mono text-[#6D001A] text-xs tracking-widest uppercase mb-16 text-center"
+          className="font-space-mono text-[#ffffff] text-xs tracking-widest uppercase mb-16 text-center"
           style={{ opacity: headerOpacity }}
         >
           Provenance Record
@@ -174,7 +174,7 @@ export default function SceneTimeline({ scrollYProgress }: Props) {
             </defs>
 
             {/* Track */}
-            <line x1="0" y1="60" x2="900" y2="60" stroke="#1a1a1a" strokeWidth="2" />
+            <line x1="0" y1="60" x2="900" y2="60" stroke="#4a0012" strokeWidth="2" />
 
             {/* Animated gold line */}
             <motion.line
@@ -182,7 +182,7 @@ export default function SceneTimeline({ scrollYProgress }: Props) {
               y1="60"
               x2="900"
               y2="60"
-              stroke="#6D001A"
+              stroke="#000000"
               strokeWidth="2"
               strokeDasharray={LINE_LENGTH}
               style={{ strokeDashoffset: dashOffset }}
