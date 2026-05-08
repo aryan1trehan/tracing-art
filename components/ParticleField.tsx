@@ -63,7 +63,7 @@ export default function ParticleField({ driftUp = false }: { driftUp?: boolean }
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(201, 168, 76, ${p.alpha * 0.7})`;
+        ctx.fillStyle = `rgba(109, 0, 26, ${p.alpha * 1.0})`;
         ctx.fill();
       }
       animRef.current = requestAnimationFrame(draw);
