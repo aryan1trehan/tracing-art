@@ -79,7 +79,7 @@ export default function SceneArtistConnection({ scrollYProgress }: Props) {
       aria-label="Artist Connection"
     >
       <motion.div
-        className="absolute inset-0 bg-[#000000]"
+        className="absolute inset-0 bg-[#6D001A]"
         style={{ opacity: sceneOpacity }}
       />
 
@@ -117,19 +117,19 @@ export default function SceneArtistConnection({ scrollYProgress }: Props) {
                 <motion.path
                   d="M 10 40 Q 100 -20 190 40"
                   fill="none"
-                  stroke="#6D001A"
+                  stroke="#000000"
                   strokeWidth="1.5"
                   filter="url(#arcGlow)"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 />
-                <circle cx="10" cy="40" r="3" fill="#6D001A" filter="url(#arcGlow)" />
-                <circle cx="190" cy="40" r="3" fill="#6D001A" filter="url(#arcGlow)" />
+                <circle cx="10" cy="40" r="3" fill="#000000" filter="url(#arcGlow)" />
+                <circle cx="190" cy="40" r="3" fill="#000000" filter="url(#arcGlow)" />
               </motion.svg>
 
               <motion.p
-                className="font-space-mono text-[#6D001A] text-xs tracking-wider text-center mt-2"
+                className="font-space-mono text-[#ffffff] text-xs tracking-wider text-center mt-2"
                 style={{ opacity: captionOpacity }}
               >
                 {pairs[0].caption}
@@ -174,19 +174,19 @@ export default function SceneArtistConnection({ scrollYProgress }: Props) {
                 <motion.path
                   d="M 10 40 Q 100 -20 190 40"
                   fill="none"
-                  stroke="#6D001A"
+                  stroke="#000000"
                   strokeWidth="1.5"
                   filter="url(#arcGlow)"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 />
-                <circle cx="10" cy="40" r="3" fill="#6D001A" />
-                <circle cx="190" cy="40" r="3" fill="#6D001A" />
+                <circle cx="10" cy="40" r="3" fill="#000000" />
+                <circle cx="190" cy="40" r="3" fill="#000000" />
               </motion.svg>
 
               <motion.p
-                className="font-space-mono text-[#6D001A] text-xs tracking-wider text-center mt-2"
+                className="font-space-mono text-[#ffffff] text-xs tracking-wider text-center mt-2"
                 style={{ opacity: caption2Opacity }}
               >
                 {pairs[1].caption}
@@ -210,10 +210,10 @@ function ArtistCard({ name, role }: { name: string; role: string }) {
   return (
     <div>
       <div
-        className="inline-block border border-[#6D001A33] px-8 py-6"
+        className="inline-block border border-[#00000044] px-8 py-6"
         style={{
-          background: "rgba(109,0,26,0.08)",
-          boxShadow: "0 0 60px rgba(109,0,26,0.20)",
+          background: "rgba(0,0,0,0.25)",
+          boxShadow: "0 0 60px rgba(0,0,0,0.50)",
         }}
       >
         <p
@@ -222,7 +222,7 @@ function ArtistCard({ name, role }: { name: string; role: string }) {
         >
           {name}
         </p>
-        <p className="font-space-mono text-[#999999] text-xs tracking-widest uppercase mt-2">
+        <p className="font-space-mono text-[#f0c8d4] text-xs tracking-widest uppercase mt-2">
           {role}
         </p>
       </div>
