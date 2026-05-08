@@ -17,10 +17,10 @@ export default function SceneOutro({ scrollYProgress }: Props) {
     [0, 1]
   );
 
-  // Background color transition: #000000 → #1a0008 (deep burgundy)
-  const bgR = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [0, 26]);
+  // Background color transition: #6D001A (burgundy) → #1a0008 (near black)
+  const bgR = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [109, 20]);
   const bgG = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [0, 0]);
-  const bgB = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [0, 8]);
+  const bgB = useTransform(scrollYProgress, [RANGE_START, RANGE_END], [26, 8]);
 
   // Clamp all sub-ranges within [RANGE_START, 1.0]
   const text1Opacity = useTransform(
@@ -77,7 +77,7 @@ export default function SceneOutro({ scrollYProgress }: Props) {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 50% 40% at 50% 50%, rgba(109,0,26,0.15) 0%, transparent 70%)",
+            "radial-gradient(ellipse 50% 40% at 50% 50%, rgba(0,0,0,0.30) 0%, transparent 70%)",
         }}
       />
 
@@ -88,7 +88,7 @@ export default function SceneOutro({ scrollYProgress }: Props) {
       >
         {/* Eyebrow */}
         <motion.p
-          className="font-space-mono text-[#6D001A] text-xs tracking-widest uppercase mb-8"
+          className="font-space-mono text-[#ffffff] text-xs tracking-widest uppercase mb-8"
           style={{ opacity: text1Opacity }}
         >
           Getty Provenance Index
@@ -121,7 +121,7 @@ export default function SceneOutro({ scrollYProgress }: Props) {
         >
           1% of artworks are in museums.
           <br />
-          <span className="text-[#999999] italic font-light">
+          <span className="text-[#f0c8d4] italic font-light">
             The rest remain unknown.
           </span>
         </motion.p>
@@ -135,16 +135,16 @@ export default function SceneOutro({ scrollYProgress }: Props) {
             className="inline-block group"
           >
             <div
-              className="relative border border-[#6D001A] px-10 py-4 overflow-hidden transition-all duration-500"
+              className="relative border border-[#000000] px-10 py-4 overflow-hidden transition-all duration-500"
               style={{
-                background: "rgba(109,0,26,0.04)",
+                background: "rgba(0,0,0,0.12)",
               }}
             >
               {/* Hover fill */}
               <div
-                className="absolute inset-0 bg-[#6D001A] opacity-0 group-hover:opacity-10 transition-opacity duration-500"
+                className="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-20 transition-opacity duration-500"
               />
-              <span className="relative font-space-mono text-[#6D001A] text-sm tracking-widest uppercase">
+              <span className="relative font-space-mono text-[#000000] text-sm tracking-widest uppercase">
                 Explore the Archive
               </span>
             </div>
@@ -153,7 +153,7 @@ export default function SceneOutro({ scrollYProgress }: Props) {
 
         {/* Footer */}
         <motion.p
-          className="font-space-mono text-[#999999] text-xs tracking-widest mt-16 opacity-40"
+          className="font-space-mono text-[#f0c8d4] text-xs tracking-widest mt-16 opacity-40"
           style={{ opacity: footerOpacity }}
         >
           Inspired by Getty Research Institute · Tracing Art
