@@ -21,7 +21,7 @@ export default function SceneHero({ scrollYProgress }: Props) {
       aria-label="Hero"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-[#0a0806]" />
+      <div className="absolute inset-0 bg-[#000000]" />
 
       {/* Particles */}
       <motion.div className="absolute inset-0" style={{ opacity: particleOpacity }}>
@@ -33,7 +33,7 @@ export default function SceneHero({ scrollYProgress }: Props) {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(109,0,26,0.18) 0%, transparent 70%)",
         }}
       />
 
@@ -46,13 +46,13 @@ export default function SceneHero({ scrollYProgress }: Props) {
         transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
       >
         <h1
-          className="font-cormorant font-light tracking-tight text-[#f5f0e8] leading-none"
+          className="font-cormorant font-light tracking-tight text-[#ffffff] leading-none"
           style={{ fontSize: "clamp(5rem, 15vw, 18rem)" }}
         >
           Tracing Art
         </h1>
         <motion.p
-          className="font-space-mono text-[#8b7355] tracking-widest uppercase mt-6"
+          className="font-space-mono text-[#999999] tracking-widest uppercase mt-6"
           style={{
             fontSize: "clamp(0.6rem, 1.4vw, 1rem)",
             opacity: subtitleOpacity,
@@ -63,7 +63,7 @@ export default function SceneHero({ scrollYProgress }: Props) {
 
         {/* Gold accent line */}
         <motion.div
-          className="mx-auto mt-8 h-px bg-[#c9a84c]"
+          className="mx-auto mt-8 h-px bg-[#6D001A]"
           initial={{ width: 0 }}
           animate={{ width: "120px" }}
           transition={{ delay: 0.8, duration: 1.2, ease: "easeOut" }}
@@ -78,11 +78,11 @@ export default function SceneHero({ scrollYProgress }: Props) {
           transition={{ delay: 2, duration: 1 }}
           style={{ opacity: subtitleOpacity, top: "100%", marginTop: "3rem" }}
         >
-          <span className="font-space-mono text-[#8b7355] text-xs tracking-widest uppercase">
+          <span className="font-space-mono text-[#999999] text-xs tracking-widest uppercase">
             scroll
           </span>
           <motion.div
-            className="w-px bg-[#c9a84c]"
+            className="w-px bg-[#6D001A]"
             animate={{ height: [16, 40, 16] }}
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           />
