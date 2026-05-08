@@ -71,10 +71,10 @@ function CollectorCard({
       }}
     >
       <div
-        className="border border-[#6D001A22] p-5 h-full"
+        className="border border-[#00000033] p-5 h-full"
         style={{
           background: "linear-gradient(135deg, #0a0a0a 0%, #000000 100%)",
-          boxShadow: "0 4px 24px rgba(0,0,0,0.5), inset 0 1px 0 rgba(109,0,26,0.25)",
+          boxShadow: "0 4px 24px rgba(0,0,0,0.5), inset 0 1px 0 rgba(0,0,0,0.25)",
         }}
       >
         <p
@@ -84,7 +84,7 @@ function CollectorCard({
           {collector.name}
         </p>
         <p
-          className="font-space-mono text-[#999999] mt-2 italic"
+          className="font-space-mono text-[#f0c8d4] mt-2 italic"
           style={{ fontSize: "clamp(0.5rem, 0.8vw, 0.65rem)" }}
         >
           {collector.role}
@@ -120,7 +120,7 @@ export default function SceneCollectors({ scrollYProgress }: Props) {
       aria-label="Collectors"
     >
       <motion.div
-        className="absolute inset-0 bg-[#000000]"
+        className="absolute inset-0 bg-[#6D001A]"
         style={{ opacity: sceneOpacity }}
       />
 
@@ -129,7 +129,7 @@ export default function SceneCollectors({ scrollYProgress }: Props) {
         style={{ opacity: sceneOpacity }}
       >
         <motion.p
-          className="font-space-mono text-[#6D001A] text-xs tracking-widest uppercase mb-12 text-center"
+          className="font-space-mono text-[#ffffff] text-xs tracking-widest uppercase mb-12 text-center"
           style={{ opacity: headerOpacity }}
         >
           The Great Collectors
@@ -147,7 +147,7 @@ export default function SceneCollectors({ scrollYProgress }: Props) {
         </div>
 
         <motion.p
-          className="font-cormorant italic text-[#999999] text-center mt-10"
+          className="font-cormorant italic text-[#f0c8d4] text-center mt-10"
           style={{
             fontSize: "clamp(1rem, 1.8vw, 1.3rem)",
             opacity: captionOpacity,
