@@ -21,7 +21,7 @@ export default function SceneHero({ scrollYProgress }: Props) {
       aria-label="Hero"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-[#000000]" />
+      <div className="absolute inset-0 bg-[#6D001A]" />
 
       {/* Particles */}
       <motion.div className="absolute inset-0" style={{ opacity: particleOpacity }}>
@@ -33,7 +33,7 @@ export default function SceneHero({ scrollYProgress }: Props) {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(109,0,26,0.18) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,0,0,0.35) 0%, transparent 70%)",
         }}
       />
 
@@ -52,7 +52,7 @@ export default function SceneHero({ scrollYProgress }: Props) {
           Tracing Art
         </h1>
         <motion.p
-          className="font-space-mono text-[#999999] tracking-widest uppercase mt-6"
+          className="font-space-mono text-[#f0c8d4] tracking-widest uppercase mt-6"
           style={{
             fontSize: "clamp(0.6rem, 1.4vw, 1rem)",
             opacity: subtitleOpacity,
@@ -63,7 +63,7 @@ export default function SceneHero({ scrollYProgress }: Props) {
 
         {/* Gold accent line */}
         <motion.div
-          className="mx-auto mt-8 h-px bg-[#6D001A]"
+          className="mx-auto mt-8 h-px bg-[#000000]"
           initial={{ width: 0 }}
           animate={{ width: "120px" }}
           transition={{ delay: 0.8, duration: 1.2, ease: "easeOut" }}
@@ -78,11 +78,11 @@ export default function SceneHero({ scrollYProgress }: Props) {
           transition={{ delay: 2, duration: 1 }}
           style={{ opacity: subtitleOpacity, top: "100%", marginTop: "3rem" }}
         >
-          <span className="font-space-mono text-[#999999] text-xs tracking-widest uppercase">
+          <span className="font-space-mono text-[#f0c8d4] text-xs tracking-widest uppercase">
             scroll
           </span>
           <motion.div
-            className="w-px bg-[#6D001A]"
+            className="w-px bg-[#000000]"
             animate={{ height: [16, 40, 16] }}
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           />
