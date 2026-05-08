@@ -49,7 +49,7 @@ function MuseumRow({
     >
       {/* Rank */}
       <span
-        className="font-space-mono text-[#6D001A] font-bold shrink-0 text-right"
+        className="font-space-mono text-[#ffffff] font-bold shrink-0 text-right"
         style={{
           fontSize: "clamp(1.2rem, 2.5vw, 2rem)",
           width: "clamp(2rem, 4vw, 3rem)",
@@ -66,18 +66,18 @@ function MuseumRow({
         >
           {museum.name}
         </p>
-        <p className="font-space-mono text-[#999999] text-xs tracking-widest mt-0.5">
+        <p className="font-space-mono text-[#f0c8d4] text-xs tracking-widest mt-0.5">
           {museum.city}
         </p>
       </div>
 
       {/* Animated bar */}
-      <div className="flex-1 relative" style={{ height: "2px", background: "#111111" }}>
+      <div className="flex-1 relative" style={{ height: "2px", background: "#4a0012" }}>
         <motion.div
-          className="absolute left-0 top-0 h-full bg-[#6D001A]"
+          className="absolute left-0 top-0 h-full bg-[#000000]"
           style={{
             width: useTransform(barWidth, (v) => `${v}%`),
-            boxShadow: "0 0 8px rgba(109,0,26,0.5)",
+            boxShadow: "0 0 8px rgba(0,0,0,0.8)",
           }}
         />
       </div>
@@ -105,7 +105,7 @@ export default function SceneMuseumRankings({ scrollYProgress }: Props) {
       aria-label="Museum Rankings"
     >
       <motion.div
-        className="absolute inset-0 bg-[#000000]"
+        className="absolute inset-0 bg-[#6D001A]"
         style={{ opacity: sceneOpacity }}
       />
 
@@ -114,7 +114,7 @@ export default function SceneMuseumRankings({ scrollYProgress }: Props) {
         style={{ opacity: sceneOpacity }}
       >
         <motion.p
-          className="font-space-mono text-[#6D001A] text-xs tracking-widest uppercase mb-8"
+          className="font-space-mono text-[#ffffff] text-xs tracking-widest uppercase mb-8"
           style={{ opacity: headerOpacity }}
         >
           Global Provenance Index — Top Institutions
