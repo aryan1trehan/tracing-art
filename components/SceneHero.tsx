@@ -49,7 +49,7 @@ export default function SceneHero({ scrollYProgress }: Props) {
           className="font-cormorant font-light tracking-tight text-[#ffffff] leading-none"
           style={{ fontSize: "clamp(5rem, 15vw, 18rem)" }}
         >
-          Tracing Art
+          Enhanccee
         </h1>
         <motion.p
           className="font-space-mono text-[#f0c8d4] tracking-widest uppercase mt-6"
@@ -58,7 +58,7 @@ export default function SceneHero({ scrollYProgress }: Props) {
             opacity: subtitleOpacity,
           }}
         >
-          Millions of records.&nbsp;&nbsp;Five centuries.&nbsp;&nbsp;The hidden journey of art.
+          SEO Portfolio.&nbsp;&nbsp;Brands that wanted to Enhanccee.
         </motion.p>
 
         {/* Gold accent line */}
